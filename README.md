@@ -1,7 +1,7 @@
 # BaseQuery
 
 Solving the problem of having thousands of different files from leaked databases and not an efficient way to store/query them. BaseQuery is an all in one program that 
-takes the annoyance out of searching through data-breaches. You can find breaches in places such as [RaidForums.com](RAIDFORUMS.com) or [Databases.today](Databases.today).
+takes the annoyance out of searching through data-breaches. You can find breaches in places such as RaidForums.com or Databases.today.
 ### Features Included:
  * Calculating the time a file will take to import, before hand
  * A 4x nested storage structure
