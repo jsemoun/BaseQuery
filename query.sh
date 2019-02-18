@@ -10,9 +10,9 @@ YELLOW='\033[1;33m'
 NC='\033[0m'  # No Color
 
 #  Checks to see if the user forgot to enter input
-if [ $# -eq 1 ];then
-	if [ "${PWD##*/}" == "BaseQuery" ];then
-		if ! [ -e "$1" ];then
+if [[ $# -eq 1 ]];then
+	if [[ "${PWD##*/}" == "BaseQuery" ]];then
+		if ! [[ -e "$1" ]];then
 			./search.sh "$1"
 		else
 			# A file was inputed
