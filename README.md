@@ -6,7 +6,7 @@ takes the annoyance out of searching through data-breaches. You can find breache
  * A 4x nested storage structure
  * Average import speeds of 10,000+ entries per second (Intel Core i7-7700HQ CPU @ 2.8GHz)
  * Instantaneous querying system
- * Facebook's zstd lossless compression algorithm to reduce the size of the data (On average reduces the data to less than 1% of the original size... I'm not joking)
+ * Facebook's zstd lossless compression algorithm to reduce the size of the data (On average reduces the data to less than 10% of the original size)
  * Calculating the time all your files will take to import based on your specific hardware
  * Duplicate data protection
  * Email harvesting program built in
