@@ -45,13 +45,13 @@ cd BaseQuery
 **Note: All of these are automatically installed using the 'dependencies.sh' script**
 
 ```
-Update packages:      (sudo apt-get update)
+Update packages:    (sudo apt-get update)
 
-Python Version 3.6+  (sudo apt-get install python3.7)
+Python Version 3.6+ (sudo apt-get install python3.7)
 Bash 4+
-tar                                 (sudo apt-get install tar)
-zstd                               (sudo apt-get install zstd)
-xterm                            (sudo apt-get install xterm)
+tar                 (sudo apt-get install tar)
+zstd                (sudo apt-get install zstd)
+xterm               (sudo apt-get install xterm)
 ```
 
 
