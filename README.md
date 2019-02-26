@@ -4,7 +4,7 @@ Solving the problem of having thousands of different files from leaked databases
 takes the annoyance out of searching through data-breaches. You can find breaches in places such as [RaidForums.com](RAIDFORUMS.com) or [Databases.today](Databases.today).
 ### Features Included:
  * A 4x nested storage structure
- * Average import speeds of 10,000+ entries per second (Intel Core i7-7700HQ CPU @ 2.8GHz)
+ * Average import speeds of 12,000+ entries per second (Intel Core i7-7700HQ CPU @ 2.8GHz)
  * Instantaneous querying system
  * Facebook's zstd lossless compression algorithm to reduce the size of the data (On average reduces the data to less than 10% of the original size)
  * Calculating the time all your files will take to import based on your specific hardware
