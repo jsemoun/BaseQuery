@@ -1,5 +1,5 @@
 <p align="center">
-<font size="6" color="red">
+<font size="22">
 BaseQuery V1.5
 </font>
 </p>
