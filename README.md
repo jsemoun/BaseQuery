@@ -5,7 +5,10 @@
 ***
 
 Solving the problem of having thousands of different files from leaked databases and not an efficient way to store/query them. BaseQuery is an all in one program that 
-takes the annoyance out of searching through data-breaches. You can find breaches in places such as [RaidForums.com](RAIDFORUMS.com) or [Databases.today](Databases.today).
+takes the annoyance out of searching through data-breaches. You can find public breaches in places such as [RaidForums.com](https://www.RAIDFORUMS.com) or [Databases.today](https://www.Databases.today).
+
+
+![basequery_banner](https://user-images.githubusercontent.com/47184892/53661764-272e8380-3c2f-11e9-8303-763cf00c27ab.png)
 ### Features Included:
  * A 4x nested storage structure
  * Average import speeds of 12,000+ entries per second (Intel Core i7-7700HQ CPU @ 2.8GHz)
@@ -43,6 +46,11 @@ cd BaseQuery
 1. Follow the instructions on the screen
     - That's it, enjoy!
     - Contact me with any issues.
+    
+
+<a href="url"><img src="https://user-images.githubusercontent.com/47184892/53662625-5fcf5c80-3c31-11e9-8be3-a43b01106a7c.PNG" align="center" height="714" width="244" ></a>
+
+![basequery_query](https://user-images.githubusercontent.com/47184892/53662460-f0596d00-3c30-11e9-8ac6-f0b154ad22b7.PNG)
 
 ***
 ### Prerequisites
