@@ -46,10 +46,11 @@ cd BaseQuery
 1. Follow the instructions on the screen
     - That's it, enjoy!
     - Contact me with any issues.
-    
 
-<a href="url"><img src="https://user-images.githubusercontent.com/47184892/53662625-5fcf5c80-3c31-11e9-8be3-a43b01106a7c.PNG" align="center" height="714" width="244" ></a>
+<a href="url"><img src="https://user-images.githubusercontent.com/47184892/53662625-5fcf5c80-3c31-11e9-8be3-a43b01106a7c.PNG" align="left" height="183" width="535" ></a>
 
+
+**Query Options**
 ![basequery_query](https://user-images.githubusercontent.com/47184892/53662460-f0596d00-3c30-11e9-8ac6-f0b154ad22b7.PNG)
 
 ***
