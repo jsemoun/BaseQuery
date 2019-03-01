@@ -1,4 +1,8 @@
-# BaseQuery V1.5
+<h1 align="center">
+  BaseQuery V1.5
+</h1>
+
+***
 
 Solving the problem of having thousands of different files from leaked databases and not an efficient way to store/query them. BaseQuery is an all in one program that 
 takes the annoyance out of searching through data-breaches. You can find breaches in places such as [RaidForums.com](RAIDFORUMS.com) or [Databases.today](Databases.today).
