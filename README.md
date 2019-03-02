@@ -16,7 +16,6 @@
       <img src="https://img.shields.io/github/issues-closed-raw/g666gle/BaseQuery.svg">
   </a>
 </p>
-https://github.com/g666gle/BaseQuery/issues?utf8=%E2%9C%93&q=is%3Aissue+is%3Aclosed+
 
 Solving the problem of having thousands of different files from leaked databases and not an efficient way to store/query them. BaseQuery is an all in one program that 
 takes the annoyance out of searching through data-breaches. You can find public breaches in places such as [RaidForums.com](https://www.RAIDFORUMS.com) or [Databases.today](https://www.Databases.today).
