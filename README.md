@@ -29,8 +29,8 @@ Your private data is being traded and sold all over the internet as we speak. To
  * Calculating the time all your files will take to import based on your specific hardware
  * Duplicate data protection
  * Email harvesting program built in
- ***
-### Installing
+ 
+## Installing
 
 To Install BaseQuery type the following commands
 
@@ -69,7 +69,7 @@ cd BaseQuery
 ![basequery_query](https://user-images.githubusercontent.com/47184892/53662460-f0596d00-3c30-11e9-8ac6-f0b154ad22b7.PNG)
 
 ***
-### Prerequisites
+## Prerequisites
 **Note: All of these are automatically installed using the 'dependencies.sh' script**
 
 ```
@@ -102,8 +102,8 @@ GNU bash, version 4.4.19(1)-release (x86_64-pc-linux-gnu)
 
 This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
 
-## DISCLAIMER:
+## Disclaimer
 
-**READ UP ON YOUR LOCAL LAWS FIRST BEFORE USING THIS PROGRAM.**
+**READ UP ON YOUR LOCAL LAWS FIRST BEFORE USING THIS PROGRAM. I TAKE NO RESPONSIBILITY FOR ANYTHING YOU DO WITH BASEQUERY**
 
 
