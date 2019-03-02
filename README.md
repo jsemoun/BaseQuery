@@ -2,7 +2,21 @@
   BaseQuery V1.5
 </h1>
 
-***
+<p align="center">
+  <a href="https://github.com/g666gle/BaseQuery/blob/master/LICENSE.md">
+    <img src="https://img.shields.io/github/license/g666gle/BaseQuery.svg">
+  </a>
+  <a href="https://github.com/g666gle/BaseQuery/graphs/contributors">
+      <img src="https://img.shields.io/github/contributors/g666gle/BaseQuery.svg">
+  </a>
+  <a href="https://github.com/g666gle/BaseQuery/issues">
+    <img src="https://img.shields.io/github/issues-raw/g666gle/BaseQuery.svg">
+  </a>
+  <a href="https://github.com/g666gle/BaseQuery/issues?utf8=%E2%9C%93&q=is%3Aissue+is%3Aclosed+">
+      <img src="https://img.shields.io/github/issues-closed-raw/g666gle/BaseQuery.svg">
+  </a>
+</p>
+https://github.com/g666gle/BaseQuery/issues?utf8=%E2%9C%93&q=is%3Aissue+is%3Aclosed+
 
 Solving the problem of having thousands of different files from leaked databases and not an efficient way to store/query them. BaseQuery is an all in one program that 
 takes the annoyance out of searching through data-breaches. You can find public breaches in places such as [RaidForums.com](https://www.RAIDFORUMS.com) or [Databases.today](https://www.Databases.today).
@@ -83,7 +97,7 @@ GNU bash, version 4.4.19(1)-release (x86_64-pc-linux-gnu)
 
 ## Authors
 
-* **G666gle** -  [Github](https://github.com/G666gle) [Twitter](https://twitter.com/g666gle1)
+* **G666gle** -  [Github](https://github.com/G666gle), [Twitter](https://twitter.com/g666gle1)
 
 
 ## License
