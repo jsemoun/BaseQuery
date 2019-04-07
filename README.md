@@ -31,6 +31,15 @@ Your private data is being traded and sold all over the internet as we speak. To
  * Output all of your findings in a standard format
  * Email harvesting built-in
  
+ 
+```
+           ####################################################################################### 
+           # PLEASE CONSIDER DONATING BITCOIN IF YOU LIKE BASEQUERY, I USE IT TO BUY COFFEE :)   #
+           #           MY ADDRESS IS: 1MYWaft35UBEJaGxV25fgZ6ExuohJoxDHQ                         #
+           #######################################################################################
+```
+
+
 ## Installing
 
 To Install BaseQuery type the following commands
