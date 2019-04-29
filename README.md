@@ -30,15 +30,6 @@ Your private data is being traded and sold all over the internet as we speak. To
  * Duplicate data protection
  * Output all of your findings in a standard format
  * Email harvesting built-in
- 
- 
-```
-           ####################################################################################### 
-           # PLEASE CONSIDER DONATING BITCOIN IF YOU LIKE BASEQUERY, I USE IT TO BUY COFFEE :)   #
-           #           MY ADDRESS IS: 1MYWaft35UBEJaGxV25fgZ6ExuohJoxDHQ                         #
-           #######################################################################################
-```
-
 
 ## Installing
 
@@ -61,9 +52,9 @@ cd BaseQuery
     - If you need a better visual there is an example.txt file in the folder "PutYourDataBasesHere"
     - You should delete the example file before running the program.
 1. Now that you have all of your files in the correct folder
-    - Open up a terminal in the BaseQuery folder.
+    - Open up a terminal in the BaseQuery directory.
     - Type ./dependencies.sh to install all of the resources needed ( You only need to do this once )
-    - Type ./run.sh to start the program
+    - Type ./run.sh to start the program ( Starts the program )
     - **Note that if you are using a laptop make sure it is plugged in. Importing databases uses A LOT of processing power and will make the import 4 times faster on average!**
 1. Follow the instructions on the screen
     - That's it, enjoy!
@@ -105,7 +96,7 @@ GNU bash, version 4.4.19(1)-release (x86_64-pc-linux-gnu)
 
 ## Authors
 
-* **G666gle** -  [Github](https://github.com/G666gle), [Twitter](https://twitter.com/g666gle1)
+* **G666gle** -  [Github](https://github.com/G666gle), [Twitter](https://twitter.com/g666g1e)
 
 
 ## License
@@ -114,6 +105,6 @@ This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md
 
 ## Disclaimer
 
-**READ UP ON YOUR LOCAL LAWS FIRST BEFORE USING THIS PROGRAM. I TAKE NO RESPONSIBILITY FOR ANYTHING YOU DO WITH BASEQUERY**
+**READ UP ON YOUR LOCAL LAWS FIRST BEFORE USING THIS PROGRAM. I TAKE NO RESPONSIBILITY FOR ANYTHING YOU DO WITH BASEQUERY. UNDEr NO SERCUMSTANCE SHOULD BASEQUERY BE USED FOR ILLEGAL PURPOSES.**
 
 
