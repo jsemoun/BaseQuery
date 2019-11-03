@@ -1,5 +1,5 @@
 <h1 align="center">
-  BaseQuery V1.5
+  ComboQuery V1.5
 </h1>
 
 <p align="center">
@@ -17,7 +17,7 @@
   </a>
 </p>
 
-Your private data is being traded and sold all over the internet as we speak. Tons of leaks come out on a daily basis which can make you feel powerless. Almost everyone's passwords and other sensitive information have been posted somewhere on the internet/darknet for any prying eyes to see, whether you like it or not. [Haveibeenpwned](https://haveibeenpwned.com/) is a resource for you to narrow down which breaches your information has been exposed in. This is a great start but what if you want to know exactly what information of yours other people have access to? BaseQuery is an all in one program that makes importing and searching through thousands of data-breaches easy. You can find all of the breaches you were exposed in, in places such as [RaidForums.com](https://www.RAIDFORUMS.com) or [Databases.today](https://www.Databases.today), import them into BaseQuery and instantaneously search for any information relating to you.
+Your private data is being traded and sold all over the internet as we speak. Tons of leaks come out on a daily basis which can make you feel powerless. The majority of user-passwords and other sensitive information have been posted somewhere on the internet/darknet for any prying eyes to see, whether you like it or not. To take more control of what personal info is out there you can use [Haveibeenpwned](https://haveibeenpwned.com/) to narrow down which breaches your information has been exposed in. This is a great start but what if you want to know exactly what information of yours other people have access to? BaseQuery is an all in one program that makes importing and searching through thousands of data-breaches easy.
 
 
 ![basequery_banner](https://user-images.githubusercontent.com/47184892/53661764-272e8380-3c2f-11e9-8303-763cf00c27ab.png)
