@@ -1,5 +1,5 @@
 <h1 align="center">
-  ComboQuery V1.5
+  BaseQuery V1.5
 </h1>
 
 <p align="center">
