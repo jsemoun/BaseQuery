@@ -1,5 +1,5 @@
 <h1 align="center">
-  BaseQuery V1.5
+  BaseQuery V2.0
 </h1>
 
 <p align="center">
@@ -28,7 +28,7 @@ what if you want to know exactly what information of yours other people have acc
 BaseQuery makes it easy to organize and search through hundreds or even thousands of breaches extremely fast.
 
 
-![basequery_banner](https://user-images.githubusercontent.com/47184892/53661764-272e8380-3c2f-11e9-8303-763cf00c27ab.png)
+![basequery_banner](https://user-images.githubusercontent.com/47184892/70909711-f2e15380-2005-11ea-9f77-d2d78e6d6d41.png)
 ### Features Included:
  * A 4x nested storage structure
  * Average import speeds of 10,000+ entries per second (Intel Core i7-7700HQ CPU @ 2.8GHz)
