@@ -48,8 +48,8 @@ To Install BaseQuery from GitHub type the following commands
 ```
 git clone https://github.com/g666gle/BaseQuery.git
 cd BaseQuery
-./install.sh
-./run.sh
+sudo ./install.sh
+sudo ./run.sh
 ```
 
 ### Docker
