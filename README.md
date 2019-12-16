@@ -24,7 +24,7 @@ somewhere on the internet/darknet for anyone to see.
 To take more control of what personal info is out there you can use 
 [Haveibeenpwned](https://haveibeenpwned.com/) to narrow down which breaches your 
 information has been exposed in. This is a great start but won't tell you which passwords were exposed.
-what if you want to know exactly what information of yours other people have access to? 
+What if you want to know exactly what information of yours other people have access to? 
 BaseQuery makes it easy to organize and search through hundreds or even thousands of breaches extremely fast.
 
 
@@ -112,7 +112,7 @@ GNU bash, version 4.4.19
 
 ## License
 
-This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
+This project is licensed under the MIT License - see the [LICENSE.md](https://github.com/g666gle/BaseQuery/blob/master/LICENCE.md) file for details
 
 ## Disclaimer
 
