@@ -96,6 +96,9 @@ if [ "$EUID" -eq 0 ]; then
 		if [[ -e ./data/DELETE_ME.txt ]];then
 			rm -f ./data/DELETE_ME.txt
 		fi
+		if [[ -e ./PutYourDataBasesHere/example.txt ]];then
+			rm -f ./PutYourDataBasesHere/example.txt
+		fi
 
 		echo
 		printf "${GREEN}[+]${NC} Finished downloading!${NC}\n"

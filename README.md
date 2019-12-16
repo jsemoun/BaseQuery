@@ -56,7 +56,7 @@ cd BaseQuery
 
 To Install BaseQuery into a docker container type the following commands
 
-_This requires docker and docker-compose to be installed_
+_This requires docker and docker-compose to be previously installed_
 ```
 git clone https://github.com/g666gle/BaseQuery.git
 ```
@@ -117,6 +117,7 @@ This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md
 ## Disclaimer
 
 **READ UP ON YOUR LOCAL LAWS FIRST BEFORE USING THIS PROGRAM. I TAKE NO RESPONSIBILITY FOR ANYTHING YOU DO WITH BASEQUERY. UNDER NO CIRCUMSTANCE SHOULD BASEQUERY BE USED FOR ILLEGAL PURPOSES.**
+
 
 
 
