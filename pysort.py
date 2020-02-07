@@ -40,45 +40,6 @@ Python Version:  3.7.1
 # have a check to make sure a file  exists before compressing or decompressing.sh
 
 
-def check_duplicate(full_file_path: str, line: str) -> bool:
-    """
-    This function takes in a path to the file and the specific line we want to check for duplicates with. First the file
-    is checked to make sure it isn't empty, then the file is opened as a binary so we can store the lines as a mmap obj.
-    Next if the line is a duplicate then False is returned else True
-    :param full_file_path: Path to the file
-    :param line: The line being checked
-    :return: True if the line should be written to the file; else False
-    """
-
-    ##########################################################
-    # MY FAILED ATTEMPT AT USING RIPGREP TO SEARCH. AVG TIME #
-    # WAS 100X SLOWER THAN MY MMAP IMPLEMENTATION BELOW      #
-    ##########################################################
-
-    # if os.getcwd().split('/')[-1] == 'BaseQuery':
-    #     if not os.stat(full_file_path).st_size == 0:
-    #         # Check to see if the line doesn't exist in the file
-    #         rg = Ripgrepy(str(line.lower()), str(full_file_path)).count_matches().run().as_string
-    #         if rg == "0" or rg == "":
-    #             return True  # Write to the file
-    #         else:
-    #             return False  # string is in file so do not re-write it
-    #     return True  # Write to the file
-    # else:
-    #     print("ERROR: Please run from within the BaseQuery directory")
-    #     exit(1)
-    #     #ERROR
-
-    #  Check to see if the file is not empty
-    if not os.stat(full_file_path).st_size == 0:
-        #  Open the file as a binary file and store it in a mmap obj
-        with open(full_file_path, 'rb', 0) as fp, mmap.mmap(fp.fileno(), 0, access=mmap.ACCESS_READ) as s:
-            #  Check to see if the line already exists in the file
-            if s.find(str.encode(line)) != -1:
-                return False  # string is in file so do not re-write it
-            return True  # string is not in file so write it to the file
-    return True  # Write to the file
-
 
 def place_data(line: str, path: str) -> int:
     """
@@ -163,11 +124,9 @@ def place_data(line: str, path: str) -> int:
                             else:
                                 new_line += emailPaswd[index]
 
-                        if check_duplicate(path + "/data/0UTLIERS/0utliers.txt", new_line):
-                            # Checks to see if there are duplicates already in the file, returns true if there isn't
-                            with open(path + "/data/0UTLIERS/0utliers.txt", 'a') as fp:
-                                fp.write(new_line + "\n")
-                            return 1
+                        with open(path + "/data/0UTLIERS/0utliers.txt", 'a') as fp:
+                            fp.write(new_line + "\n")
+                        return 1
                     return 0
             else:  # The directory already exists
                 if folder_depth == 0:  # There is NOT at least one consecutive valid char
@@ -195,11 +154,10 @@ def place_data(line: str, path: str) -> int:
                             else:
                                 new_line += emailPaswd[index]
 
-                        if check_duplicate(path + "/data/0UTLIERS/0utliers.txt", new_line):
-                            with open(path + "/data/0UTLIERS/0utliers.txt", 'a') as fp:
+                        with open(path + "/data/0UTLIERS/0utliers.txt", 'a') as fp:
                                 #  Write to the file
-                                fp.write(new_line + "\n")
-                            return 1
+                            fp.write(new_line + "\n")
+                        return 1
                     return 0
 
             #  Check to see if the second letter doesn't have a directory
@@ -233,11 +191,10 @@ def place_data(line: str, path: str) -> int:
                             else:
                                 new_line += emailPaswd[index]
 
-                        #  Check for duplicates
-                        if check_duplicate(path + "/data/" + first_letter + "/0UTLIERS/0utliers.txt", new_line):
-                            with open(path + "/data/" + first_letter + "/0UTLIERS/0utliers.txt", 'a') as fp:
-                                fp.write(new_line + "\n")
-                            return 1
+                        with open(path + "/data/0UTLIERS/0utliers.txt", 'a') as fp:
+                                #  Write to the file
+                            fp.write(new_line + "\n")
+                        return 1
                     return 0
             else:  # The directory already exists
                 if folder_depth <= 1:  # There is not at least two consecutive valid char
@@ -265,10 +222,10 @@ def place_data(line: str, path: str) -> int:
                             else:
                                 new_line += emailPaswd[index]
 
-                        if check_duplicate(path + "/data/" + first_letter + "/0UTLIERS/0utliers.txt", new_line):
-                            with open(path + "/data/" + first_letter + "/0UTLIERS/0utliers.txt", 'a') as fp:
-                                fp.write(new_line + "\n")
-                            return 1
+                        with open(path + "/data/0UTLIERS/0utliers.txt", 'a') as fp:
+                                #  Write to the file
+                            fp.write(new_line + "\n")
+                        return 1
                     return 0
 
             #  Check to see if the third letter doesn't have a directory
@@ -301,10 +258,10 @@ def place_data(line: str, path: str) -> int:
                             else:
                                 new_line += emailPaswd[index]
 
-                        if check_duplicate(path + "/data/" + first_letter + "/" + second_letter + "/0UTLIERS/0utliers.txt", new_line):
-                            with open(path + "/data/" + first_letter + "/" + second_letter + "/0UTLIERS/0utliers.txt", 'a') as fp:
-                                fp.write(new_line + "\n")
-                            return 1
+                        with open(path + "/data/0UTLIERS/0utliers.txt", 'a') as fp:
+                                #  Write to the file
+                            fp.write(new_line + "\n")
+                        return 1
                     return 0
             else:  # The directory already exists
                 if folder_depth <= 2:  # There is not at least three consecutive valid char
@@ -332,10 +289,10 @@ def place_data(line: str, path: str) -> int:
                             else:
                                 new_line += emailPaswd[index]
 
-                        if check_duplicate(path + "/data/" + first_letter + "/" + second_letter + "/0UTLIERS/0utliers.txt", new_line):
-                            with open(path + "/data/" + first_letter + "/" + second_letter + "/0UTLIERS/0utliers.txt", 'a') as fp:
-                                fp.write(new_line + "\n")
-                            return 1
+                        with open(path + "/data/0UTLIERS/0utliers.txt", 'a') as fp:
+                                #  Write to the file
+                            fp.write(new_line + "\n")
+                        return 1
                     return 0
 
             #  Checks to see if the file in the third directory doesn't exists
@@ -366,10 +323,8 @@ def place_data(line: str, path: str) -> int:
                                 new_line += emailPaswd[index] + ":"
                             else:
                                 new_line += emailPaswd[index]
-
-                        if check_duplicate(path + "/data/" + first_letter + "/" + second_letter + "/" + third_letter + "/0UTLIERS/0utliers.txt", new_line):
-                            output_file.write(new_line + "\n")
-                            return 1
+                        output_file.write(new_line + "\n")
+                           
                 return 0
             else:  # The file exists
                 if folder_depth == 4:  # The file does exist in the third dir but there is 4 valid chars
@@ -383,11 +338,11 @@ def place_data(line: str, path: str) -> int:
                         else:
                             new_line += emailPaswd[index]
 
-                    if check_duplicate(path + "/data/" + first_letter + "/" + second_letter + "/" + third_letter + "/" + fourth_letter + ".txt", new_line):
-                        with open(path + "/data/" + first_letter + "/" + second_letter + "/" + third_letter + "/" + fourth_letter + ".txt", 'a') as output_file:
-                            output_file.write(new_line + "\n")
-                        return 1
-                    return 0
+           
+                    with open(path + "/data/" + first_letter + "/" + second_letter + "/" + third_letter + "/" + fourth_letter + ".txt", 'a') as output_file:
+                        output_file.write(new_line + "\n")
+                    return 1
+                    
                 elif folder_depth == 3:  # The file does exist in the third dir but there is only 3 valid chars
                     #  Check to see if you need to make the 0UTLIERS dir
                     if not os.path.isdir(path + "/data/" + first_letter + "/" + second_letter + "/" + third_letter + "/0UTLIERS"):
@@ -403,13 +358,12 @@ def place_data(line: str, path: str) -> int:
                         else:
                             new_line += emailPaswd[index]
 
-                    #  Check for duplicates and then write to the file
-                    if check_duplicate(path + "/data/" + first_letter + "/" + second_letter + "/" + third_letter + "/0UTLIERS/0utliers.txt", new_line):
-                        #  Append the 0UTLIERS file
-                        with open(path + "/data/" + first_letter + "/" + second_letter + "/" + third_letter + "/0UTLIERS/0utliers.txt", 'a') as output_file:
-                            output_file.write(new_line + "\n")
-                        return 1
-                    return 0
+              
+              
+                    with open(path + "/data/" + first_letter + "/" + second_letter + "/" + third_letter + "/0UTLIERS/0utliers.txt", 'a') as output_file:
+                        output_file.write(new_line + "\n")
+                    return 1
+
 
         # NOT a valid email address or the username is NOT >= 4; or there is more than one '@' in the username
         else:
@@ -437,11 +391,11 @@ def place_data(line: str, path: str) -> int:
                         else:
                             new_line += emailPaswd[index]
 
-                    if check_duplicate(path + "/data/NOTVALID/FAILED_TEST.txt", new_line):
-                        #  Open the file; check if it's a duplicate and write to the file
-                        with open(path + "/data/NOTVALID/FAILED_TEST.txt", 'a') as fp:
-                            fp.write(new_line + "\n")
-                        return 1
+                    
+                    with open(path + "/data/NOTVALID/FAILED_TEST.txt", 'a') as fp:
+                        fp.write(new_line + "\n")
+                    return 1
+             
             return 0
     except OSError:
         raise
