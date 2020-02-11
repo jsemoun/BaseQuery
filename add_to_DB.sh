@@ -20,7 +20,7 @@ echo
 echo "Script description : ";
 echo "		Download a DB, with the format \"john.doe@domain.fr:password\"";
 echo "		Put it into the 'PutYourDataBasesHere' folder";
-echo "		Passwords are written into ~/security/projects/data_breach/wordlists/big_list_sorted";
+echo "		Passwords are written into big_list_sorted";
 echo
 printf "${RED}[*]${NC} Starting at $(date)\n"
 
@@ -67,7 +67,7 @@ if [ "${PWD##*/}" == "BaseQuery" ];then
 						if [[ "$line" == *":"* ]];then
 							echo "Right format : the first line contains the ':' delimiter"		
 							echo "Writing passwords"
-							cut -d ":" -f2 "$dataDir"/PutYourDataBasesHere/"$inputfile" >> ~/security/projects/data_breach/wordlists/big_list_sorted
+							cut -d ":" -f2 "$dataDir"/PutYourDataBasesHere/"$inputfile" >> big_list_sorted
 						else 
 							echo "Not the right format: the first line doesn't contain the ':' delimiter. Apply sed command to your file if you have a ';' delimiter"
 						fi
@@ -85,8 +85,8 @@ if [ "${PWD##*/}" == "BaseQuery" ];then
 		
 			echo "Sort & Uniq step"
 			echo	
-			sort -u ~/security/projects/data_breach/wordlists/big_list_sorted > ~/security/projects/data_breach/wordlists/big_list_new
-			mv -f ~/security/projects/data_breach/wordlists/big_list_new ~/security/projects/data_breach/wordlists/big_list_sorted
+			sort -u big_list_sorted > big_list_new
+			mv -f big_list_new big_list_sorted
 			echo "Finished"	
 
 		else # No new files found 
