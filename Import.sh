@@ -100,5 +100,3 @@ printf "${RED}[*]${NC} Completed\n"
 printf "[*] Completed\n" >> ./Logs/ActivityLogs.log
 
 
-
-
