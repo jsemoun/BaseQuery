@@ -39,47 +39,6 @@ Python Version:  3.7.1
 # Automatically find the amount of lines in import using wc
 # have a check to make sure a file  exists before compressing or decompressing.sh
 
-
-def check_duplicate(full_file_path: str, line: str) -> bool:
-    """
-    This function takes in a path to the file and the specific line we want to check for duplicates with. First the file
-    is checked to make sure it isn't empty, then the file is opened as a binary so we can store the lines as a mmap obj.
-    Next if the line is a duplicate then False is returned else True
-    :param full_file_path: Path to the file
-    :param line: The line being checked
-    :return: True if the line should be written to the file; else False
-    """
-
-    ##########################################################
-    # MY FAILED ATTEMPT AT USING RIPGREP TO SEARCH. AVG TIME #
-    # WAS 100X SLOWER THAN MY MMAP IMPLEMENTATION BELOW      #
-    ##########################################################
-
-    # if os.getcwd().split('/')[-1] == 'BaseQuery':
-    #     if not os.stat(full_file_path).st_size == 0:
-    #         # Check to see if the line doesn't exist in the file
-    #         rg = Ripgrepy(str(line.lower()), str(full_file_path)).count_matches().run().as_string
-    #         if rg == "0" or rg == "":
-    #             return True  # Write to the file
-    #         else:
-    #             return False  # string is in file so do not re-write it
-    #     return True  # Write to the file
-    # else:
-    #     print("ERROR: Please run from within the BaseQuery directory")
-    #     exit(1)
-    #     #ERROR
-
-    #  Check to see if the file is not empty
-    if not os.stat(full_file_path).st_size == 0:
-        #  Open the file as a binary file and store it in a mmap obj
-        with open(full_file_path, 'rb', 0) as fp, mmap.mmap(fp.fileno(), 0, access=mmap.ACCESS_READ) as s:
-            #  Check to see if the line already exists in the file
-            if s.find(str.encode(line)) != -1:
-                return False  # string is in file so do not re-write it
-            return True  # string is not in file so write it to the file
-    return True  # Write to the file
-
-
 def place_data(line: str, path: str) -> int:
     """
     This function takes in the line of the current file and the root path to the BaseQuery directory. Checks the format

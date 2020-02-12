@@ -8,8 +8,8 @@
 # Description:	Import.sh first checks to make sure the user is in the correct directory.
 #		Then, every file in the data directory will have their hash compared to the
 #		log file keeping track of all of the databases previously imported. If the 
-#		database has not been previously imported, the data is decompressed and the 
-#		folder is primed, lastly the pysort.py file is called. 
+#		database has not been previously imported, the folder is primed and 
+#		lastly the pysort.py file is called. 
 
 RED='\033[0;31m'
 YELLOW='\033[1;33m'
@@ -24,8 +24,6 @@ if [ "${PWD##*/}" == "BaseQuery" ];then
 	if [ -d ./PutYourDataBasesHere ];then
 		dataDir="$(pwd)"
 
-		#  This loop is checking to see if any new files are in the PutYourDataBasesHere
-		#  directory.If not then there is no reason to decompress and compress everything
 		let i=0  # used to count the amount of files not already imported 
 		declare -a arr
 		 while read -r inputfile;do
@@ -39,26 +37,8 @@ if [ "${PWD##*/}" == "BaseQuery" ];then
 		done< <(find PutYourDataBasesHere -type f -exec echo {} \; | cut -f 2- -d "/")
 
 		# if there are files that need to be imported
-		if [ $i -ne 0 ];then
-			#  decompress all of the folders before priming and import
-			printf "${YELLOW}[!]${NC} Decompressing all stored data\n"
-			printf "[!] Decompressing all stored data\n" >> ./Logs/ActivityLogs.log
-			#  If there are 2 args given then an export path is given
-			if [ $# -eq 1 ]; then
-				checked_dir="$1"
-				# If the last char is a '/' get rid of it
-				if [ "${checked_dir: -1}" == "/" ];then
-					#  Delete the / and re-assign
-					checked_dir="${checked_dir%?}"
-				fi
-				./decompress.sh -d "$checked_dir/data"
-			# Use default export path
-			elif [ $# -eq 0 ]; then
-				./decompress.sh
-			fi
-			printf "${GREEN}[+]${NC} Finished decompressing!\n"
-			printf "[+] Finished decompressing!\n" >> ./Logs/ActivityLogs.log
-
+		if [ $i -ne 0 ];then            
+            
 			if [ $# -eq 1 ]; then
 				checked_dir="$1"
 				# If the last char is a '/' get rid of it
@@ -82,10 +62,10 @@ if [ "${PWD##*/}" == "BaseQuery" ];then
 
 					if [ $# -eq 1 ];then
 						#  Import files from PutYourDataBasesHere and export somewhere else
-						python3.7 pysort.py --export_dir "$1" "$inputfile" 
+						python3.7 pysort2.py --export_dir "$1" "$inputfile" 
 					else
 						#  Call a python script to iterate through the file and sort them
-						python3.7 pysort.py "$inputfile"
+						python3.7 pysort2.py "$inputfile"
 					fi
 
 					printf "${YELLOW}[!] Adding $inputfile to importedDBS.log${NC}\n"
@@ -96,25 +76,7 @@ if [ "${PWD##*/}" == "BaseQuery" ];then
 					printf "[!] $inputfile SHASUM already found in importedDBS.log\n" >> ./Logs/ActivityLogs.log
 				fi
 			done
-			printf "${YELLOW}[!]${NC} Compressing all data\n"
-			printf "[!] Compressing all data\n" >> ./Logs/ActivityLogs.log
-			#  All data is stored. Time to compress
-
-			if [ $# -eq 1 ];then
-				checked_dir="$1"
-				# If the last char is a '/' get rid of it
-				if [ "${checked_dir: -1}" == "/" ];then
-					#  Delete the / and re-assign
-					checked_dir="${checked_dir%?}"
-				fi
-				./compress.sh "$checked_dir"/data
-			# Use default export path
-			elif [ $# -eq 0 ];then
-				./compress.sh
-			fi
-			printf "${GREEN}[+]${NC} Finished compressing!\n"
-			printf "[+] Finished compressing!\n" >> ./Logs/ActivityLogs.log
-
+            
 		else # No new files found 
 			echo
 			printf "${RED}ERROR:${NC} No new files found in the 'PutYourDataBasesHere' directory \n"
