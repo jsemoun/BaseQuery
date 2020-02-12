@@ -498,34 +498,18 @@ if [ "${PWD##*/}" == "BaseQuery" ];then
 				echo "3. Replace big_list_sorted with big_list";
 				./add_to_DB.sh
 			
-			elif [ "$answer" -eq 12 ];then
-				echo "This process can be very long : it will sort all files and remove duplicate lines"
-				read -p "Are you sure do you want to launch the process ? You can stop it with Ctrl + Z [y/n] " ans
-				while [[ "$ans" != [YyNn] ]];do
-					#read -p "${YELLOW}[!]${NC} Please enter either \"y\" or \"n\"! " ans
-					read -p "test" ans
-				done
-				
-				if [[ "$ans" == [Yy] ]];then
-					echo "[+] run.sh COMMAND '8'    [ $(date) ]" >> ./Logs/ActivityLogs.log
-					./data/remove_duplicate.sh
-					printf "${GREEN} [!] The Database is sorted and cleaned !${NC}\n"
-				fi
 
 			elif [ "$answer" -eq 8 ];then
-				read -p "Are you sure? This log file contains all hashes for previously imported databases! [y/n] " answer
+				read -p "The process can be very long : it will sort all files and remove duplicate lines [y/n] " answer
 				while [[ "$answer" != [YyNn] ]];do
 					printf "${YELLOW}[!]${NC} Please enter either \"y\" or \"n\"!\n"
-					read -p "Are you sure? This log file contains all hashes for previously imported databases! [y/n] " answer
+					read -p "The process can be very long : it will sort all files and remove duplicate lines [y/n] " answer
 				done
 
 				if [[ "$answer" == [Yy] ]];then
-				 #	: > Logs/importedDBS.log
-					 echo "[+] run.sh COMMAND '8'    [ $(date) ]" >> ./Logs/ActivityLogs.log
+					echo "[+] run.sh COMMAND '8'    [ $(date) ]" >> ./Logs/ActivityLogs.log
 					./data/remove_duplicate.sh
 					printf "${GREEN} [!] The Database is sorted and cleaned !${NC}\n"
-
-					printf "${GREEN}[!] importedDBS.log has been cleared!${NC}\n"
 				fi
 			fi
 		fi 
